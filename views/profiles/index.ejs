@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>
+<h1>All Profiles</h1>
+<% for (let profile of profiles) {%>
+<div class="card" mb-3>
+  <div class="row">
+    <div class="col-md-4">
+      <img class="img-fluid" alt="" src="<%= profile.image %>" />
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5 class="card-title"><%= profile.name %></h5>
+        <p class="card-text"><%= profile.title %></p>
+        <p class="card-text">
+          <small class="text-muted"
+            >"<b><i><%= profile.quote %></i></b
+            >"</small
+          >
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <h5>Answer Previews:</h5>
+        <hr />
+        <h4>What does your ideal candidate look like?</h4>
+        <p class="card-text"><%= profile.questionThree %></p>
+        <h4>What are some of the challenges that this position would face?</h4>
+        <p class="card-text"><%= profile.questionFour %></p>
+        <h4>What is your favorite office tradition?</h4>
+        <p class="card-text"><%= profile.questionSix %></p>
+        <a class="btn btn-primary" href="/profiles/<%=profile._id%>"
+          >View <%= profile.name %>'s Answers</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+<div>
+  <a class="btn btn-success" href="/profiles/new">Add User</a>
+</div>
