@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 
 // mongodb+srv://JakeH:LjRkvNMVjSoBGMIA@cluster0.jbtvl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
-mongoose.connect('mongodb+srv://JakeH:LjRkvNMVjSoBGMIA@cluster0.jbtvl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://JakeH:Yel04low@cluster0.jbtvl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology:true
 });
 
