@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate') %>
 <div class="row">
   <h1 class="text-center">Add User</h1>
-  <div class="col-6 offset-3">
+  <div class="form-group">
     <form action="/profiles" method="POST">
       <div class="mb-3">
         <label for="name" class="form-label">Name:</label
@@ -42,85 +42,118 @@
       <hr />
 
       <!-- Questions -->
-      <div class="mb-3">
-        <h5>
-          What does a typical day look like as a developer with Station 8 look
-          like?
-        </h5>
 
-        <label class="form-label" for="questionOne"></label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionOne"
-          name="profile[questionOne]"
-          placeholder="Your thoughts here:"
-        >
-        </textarea>
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question One</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            What does a typical day look like as a developer with Station 8?
+          </h5>
+          <p class="card-text">
+            <label class="form-label" for="questionOne"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionOne"
+              name="profile[questionOne]"
+              placeholder="Your thoughts here:"
+            >
+            </textarea>
+          </p>
+        </div>
       </div>
-      <hr />
-      <div class="mb-3">
-        <h5>What are some project I would work on at Station 8?</h5>
-        <label class="form-label" for="questionTwo"></label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionTwo"
-          name="profile[questionTwo]"
-          placeholder="Your thoughts here:"
-        ></textarea>
+
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question Two</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            What are some projects I would work on at Station 8?
+          </h5>
+          <p class="card-text">
+            <label class="form-label" for="questionTwo"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionTwo"
+              name="profile[questionTwo]"
+              placeholder="Your thoughts here:"
+            ></textarea>
+          </p>
+        </div>
       </div>
-      <hr />
-      <div class="mb-3">
-        <h5>What does your ideal candidate look like?</h5>
-        <label class="form-label" for="questionThree"></label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionThree"
-          name="profile[questionThree]"
-          placeholder="Your thoughts here:"
-        ></textarea>
+
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question Three</div>
+        <div class="card-body">
+          <h5 class="card-title">What does your ideal candidate look like?</h5>
+          <p class="card-text">
+            <label class="form-label" for="questionThree"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionThree"
+              name="profile[questionThree]"
+              placeholder="Your thoughts here:"
+            ></textarea>
+          </p>
+        </div>
       </div>
-      <hr />
-      <div class="mb-3">
-        <h5>What are some of the challenges that this position would face?</h5>
-        <label class="form-label" for="questionFour"></label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionFour"
-          name="profile[questionFour]"
-          placeholder="Your thoughts here:"
-        ></textarea>
+
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question Four</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            What are some of the challenges that this position would face?
+          </h5>
+          <p class="card-text">
+            <label class="form-label" for="questionFour"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionFour"
+              name="profile[questionFour]"
+              placeholder="Your thoughts here:"
+            ></textarea>
+          </p>
+        </div>
       </div>
-      <hr />
-      <div class="mb-3">
-        <h5>Who would I work closely with?</h5>
-        <label class="form-label" for="questionFive"></label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionFive"
-          name="profile[questionFive]"
-          placeholder="Your thoughts here:"
-        ></textarea>
+
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question Five</div>
+        <div class="card-body">
+          <h5 class="card-title">Who would I work closely with?</h5>
+          <p class="card-text">
+            <label class="form-label" for="questionFive"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionFive"
+              name="profile[questionFive]"
+              placeholder="Your thoughts here:"
+            ></textarea>
+          </p>
+        </div>
       </div>
-      <hr />
-      <div class="mb-3">
-        <h5>What is your favorite office tradition?</h5>
-        <label class="form-label" for="questionSix">Answer</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="questionSix"
-          name="profile[questionSix]"
-          placeholder="Your thoughts here:"
-        ></textarea>
+
+      <div class="card mb-4 mt-4">
+        <div class="card-header">Interview Question Six</div>
+        <div class="card-body">
+          <h5 class="card-title">What is your favorite office tradition?</h5>
+          <p class="card-text">
+            <label class="form-label" for="questionSix"></label>
+            <textarea
+              class="form-control"
+              type="text"
+              id="questionSix"
+              name="profile[questionSix]"
+              placeholder="Your thoughts here:"
+            ></textarea>
+          </p>
+        </div>
       </div>
 
       <div class="mb-3"><button class="btn btn-success">Add User</button></div>
     </form>
-    <a class="btn btn-primary" href="/profiles">All Users</a>
+    <a class="btn btn-primary mb-3" href="/profiles">All Users</a>
   </div>
 </div>
