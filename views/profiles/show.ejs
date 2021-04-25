@@ -1,23 +1,17 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="card" style="width: 18rem">
-  <img src="<%= profile.image %>" class="card-img-top" alt="..." />
+<div class="card" style="width: 18rem;">
+  <img src="<%= profile.image %>" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">
-      <h4>Favorite Quote:</h4>
-<p>
-  "<b><i><%= profile.quote %></i></b
-  >"
-</p>
-    </p>
+    <h5 class="card-title"><%= profile.name%></h5>
+    <p class="card-text"> "<b><i><%= profile.quote %></i></b>"</p>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= profile.title %></li>
+  </ul>
 </div>
 
-<h1><%= profile.name %></h1>
-<h3><%= profile.title %></h3>
-
-
-<div class="card mb-4">
+<div class="card mb-4 mt-4">
   <div class="card-header">
     Interview Question One
   </div>
