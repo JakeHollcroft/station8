@@ -1,43 +1,92 @@
 <% layout('layouts/boilerplate') %>
 
-<h1><%= profile.name %></h1>
-<h3><%= profile.title %></h3>
-<img src="<%= profile.image %>" alt="<%= profile.name %>" />
-
-<h4>Favorite Quote:</h4>
+<div class="card" style="width: 18rem">
+  <img src="<%= profile.image %>" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <p class="card-text">
+      <h4>Favorite Quote:</h4>
 <p>
   "<b><i><%= profile.quote %></i></b
   >"
 </p>
+    </p>
+  </div>
+</div>
 
-<hr />
-<h3>Interview Answers:</h3>
+<h1><%= profile.name %></h1>
+<h3><%= profile.title %></h3>
 
-<h5>
-  What does a typical day look like as a developer with Station 8 look like?
-</h5>
-<p><%= profile.questionOne %></p>
 
-<h5>What are some projects that I would work on at Station 8?</h5>
-<p><%= profile.questionTwo %></p>
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question One
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What does a typical day look like as a developer with Station 8 look like?</h5>
+    <p class="card-text"><%= profile.questionOne %></p>
+  </div>
+</div>
 
-<h5>What does your ideal candidate look like?</h5>
-<p><%= profile.questionThree %></p>
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question Two
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What are some projects that I would work on at Station 8?</h5>
+    <p class="card-text"><%= profile.questionTwo %></p>
+  </div>
+</div>
 
-<h5>What are some of the challenges that this position would face?</h5>
-<p><%= profile.questionFour %></p>
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question Three
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What does your ideal candidate look like?</h5>
+    <p class="card-text"><%= profile.questionThree %></p>
+  </div>
+</div>
 
-<h5>Who would I work closely with?</h5>
-<p><%= profile.questionFive %></p>
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question Four
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What are some of the challenges that this position would face?</h5>
+    <p class="card-text"><%= profile.questionFour %></p>
+  </div>
+</div>
 
-<h5>What is your favorite office tradition?</h5>
-<p><%= profile.questionSix %></p>
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question Five
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Who would I work closely with?</h5>
+    <p class="card-text"><%= profile.questionFive %></p>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">
+    Interview Question Six
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">What is your favorite office tradition?</h5>
+    <p class="card-text"><%= profile.questionSix %></p>
+  </div>
+</div>
+
+
 <footer>
-  <p>
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group"><p>
     <a class="btn btn-info" href="/profiles/<%= profile._id %>/edit"
       >Edit Profile
     </a>
+    <form action="/profiles/<%=profile._id%>?_method=DELETE" method="POST">
+      <button class="btn btn-danger">Delete</button></form>
   </p>
-
+</div></footer>
   <a class="btn btn-primary mb-5" href="/profiles">All Users</a>
-</footer>
+  
+
