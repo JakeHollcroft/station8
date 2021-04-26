@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate') %>
 <h1>Interview Team</h1>
 <% for (let profile of profiles) {%>
-<div class="card" mb-3>
+<div class="card">
   <div class="row">
     <div class="col-md-4">
       <img class="img-fluid" alt="" src="<%= profile.image %>" />
@@ -35,6 +35,7 @@
     </div>
   </div>
 </div>
+<br /><br />
 <% } %>
 <div class="mt-5 mb-3">
   <a class="btn btn-success" href="/profiles/new">Add User</a>
